@@ -76,14 +76,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'ENFORCE_SCHEMA': True,
         'NAME': 'django_db',
         'HOST': 'mongo',
         'PORT': 27017,
         'USER': 'default',
         'PASSWORD': 'secret',
-        'AUTH_SOURCE': 'admin',
-        'AUTH_MECHANISM': 'SCRAM-SHA-1',
     }
 }
 # Password validation
