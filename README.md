@@ -4,7 +4,7 @@
 
 To build the containers you should navigate to root directory of the project and build with:
 
-    docker build .ry:
+    docker build .
 
 After that the docker containers should be builded and ready to use.
 To start services execute:
