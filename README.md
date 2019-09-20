@@ -1,30 +1,34 @@
 # django-docker
-Python and django docker setup
 
-To build navigate to django-docker path and build with
-docker build .
+**Docker containers for django and python using djongo as a database driver.**
 
-After that the docker containers should be builded.
+To build the containers you should navigate to root directory of the project and build with:
 
-To run the containers execute
+    docker build .ry:
 
-docker-compose up
+After that the docker containers should be builded and ready to use.
+To start services execute:
 
-Mongo db is automatically created, to access mongo express navigate to
+    docker-compose up
 
-localhost:8081
+Mongo database is automatically created, to access mongo-express (database ui) navigate to
 
-To access django project navigate to
+    localhost:8081
 
-localhost:8000
+And to access django project you should navigate to:
 
-The application is already connected with created mongo db.
+    localhost:8000
 
-To start a new app do it with
-docker-compose run web sh -c "django-admin.py startapp nameofapp"
+The application is already connected with created mongo db!
 
-To create migrations
-docker-compose run web sh -c "python manage.py makemigrations"
+If you wish to start a new application you can do it with the following command, also ran in root directory:
 
-To migrate
-docker-compose run web sh -c "python manage.py migrate"
+    docker-compose run web sh -c "django-admin.py startapp nameofapp"
+
+To create migrations run:
+
+    docker-compose run web sh -c "python manage.py makemigrations"
+
+And to migrate run:
+
+    docker-compose run web sh -c "python manage.py migrate"
